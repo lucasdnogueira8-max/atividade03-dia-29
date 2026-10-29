@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #17234f;
+    padding: 15px;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1px;
+    padding: 1x 2px;
+}
+
+.logo {
+    font-size: 4px;
+    font-weight: bold;
+    border-top: 5px solid #17234f;
+    border-bottom: 5px solid #17234f;
+    padding: 0 1px;
+}
+.cabecalho img{
+    height: 200px;
+}
+
+
+.banner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.layout {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+}
+
+.menu {
+    width: 210px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu a {
+    color: #222222;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.menu a:hover {
+    color: #007b83;
+}
+
+.doacao {
+    margin-top: 20px;
+    padding: 15px 8px;
+    text-align: center;
+    color: white;
+}
+.doacao img{
+    height: 80px;
+}
+
+.doacao a {
+    color: white;
+    font-weight: bold;
+}
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px 18px;
+}
+
+.card {
+    border-bottom: 2px solid #d0d0d0;
+    padding-bottom: 12px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 11px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.rodape {
+    border-top: 2px solid #aaaaaa;
+    padding: 25px 10px 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.coluna-rodape h3 {
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.coluna-rodape p {
+    font-size: 11px;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 750px) {
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .cabecalho h1 {
+        font-size: 27px;
+    }
+
+    .layout {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .doacao {
+        width: 100%;
+    }
+
+    .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+    }
+
+    .copyright {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .banner img {
+        height: 300px;
+    }
+}
